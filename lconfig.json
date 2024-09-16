@@ -2,7 +2,7 @@
     "panel_ip": "127.0.0.1",
     "panel_port": 23333,
     "web_ip": "127.0.0.1",
-    "web_port": 6000,
+    "web_port": 5000,
     "server_name": "Loshop\u670d\u52a1\u5668",
     "server_name_en": "Loshop MC Server",
     "rcon_password": "password",

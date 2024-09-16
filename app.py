@@ -338,57 +338,57 @@ def login():
     return res
 
 
-@app.route('/del', methods=["POST", "GET"])
-def udel():
-    abort(403)
-    if request.method == "POST":
-        result = request.form.get("name")
-        sendkey(result)
-        if result == "":
-            return render_template("del.html", result=result + "请输入游戏名", color="red",
-                                   servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
-                                   e_real_world=lconfig.config()["enable_real_world"],
-                                   e_download_img=lconfig.config()["enable_download_img"],
-                                   e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
-                                   e_about=lconfig.config()["enable_about"],
-                                   e_client_download=lconfig.config()["enable_client_download"],
-                                   e_register=lconfig.config()["enable_register"],
-                               qq_group_id=lconfig.config()["qq_group_id"],
-                               qq_group_link=lconfig.config()["qq_group_link"])
-        with open('data.json', 'r') as file:
-            data = json.load(file)
-        if result.strip(' ') not in data["user"]:
-            return render_template("del.html", result=result + "已经移除，请勿重复操作", color="red",
-                                   servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
-                                   e_real_world=lconfig.config()["enable_real_world"],
-                                   e_download_img=lconfig.config()["enable_download_img"],
-                                   e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
-                                   e_about=lconfig.config()["enable_about"],
-                                   e_client_download=lconfig.config()["enable_client_download"],
-                                   e_register=lconfig.config()["enable_register"],
-                               qq_group_id=lconfig.config()["qq_group_id"],
-                               qq_group_link=lconfig.config()["qq_group_link"])
-        data["user"].remove(result.strip(' '))
-        with open('data.json', 'w') as file:
-            json.dump(data, file, indent=4)
-        return render_template("del.html", result=result + " 移除成功！", color="white",
-                               servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
-                               e_real_world=lconfig.config()["enable_real_world"],
-                               e_download_img=lconfig.config()["enable_download_img"],
-                               e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
-                               e_about=lconfig.config()["enable_about"],
-                               e_client_download=lconfig.config()["enable_client_download"],
-                               e_register=lconfig.config()["enable_register"],
-                               qq_group_id=lconfig.config()["qq_group_id"],
-                               qq_group_link=lconfig.config()["qq_group_link"])
-    return render_template("del.html", e_panel=lconfig.config()["enable_panel"],
-                           e_real_world=lconfig.config()["enable_real_world"],
-                           e_download_img=lconfig.config()["enable_download_img"], e_tp=lconfig.config()["enable_tp"],
-                           e_seed_map=lconfig.config()["enable_seed_map"], e_about=lconfig.config()["enable_about"],
-                           e_client_download=lconfig.config()["enable_client_download"],
-                           e_register=lconfig.config()["enable_register"],
-                               qq_group_id=lconfig.config()["qq_group_id"],
-                               qq_group_link=lconfig.config()["qq_group_link"])
+#@app.route('/del', methods=["POST", "GET"])
+#def udel():
+#    abort(403)
+#    if request.method == "POST":
+#        result = request.form.get("name")
+#        sendkey(result)
+#        if result == "":
+#            return render_template("del.html", result=result + "请输入游戏名", color="red",
+#                                   servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
+#                                   e_real_world=lconfig.config()["enable_real_world"],
+#                                   e_download_img=lconfig.config()["enable_download_img"],
+#                                   e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
+#                                   e_about=lconfig.config()["enable_about"],
+#                                   e_client_download=lconfig.config()["enable_client_download"],
+#                                   e_register=lconfig.config()["enable_register"],
+#                               qq_group_id=lconfig.config()["qq_group_id"],
+#                               qq_group_link=lconfig.config()["qq_group_link"])
+#        with open('data.json', 'r') as file:
+#            data = json.load(file)
+#        if result.strip(' ') not in data["user"]:
+#            return render_template("del.html", result=result + "已经移除，请勿重复操作", color="red",
+#                                   servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
+#                                   e_real_world=lconfig.config()["enable_real_world"],
+#                                   e_download_img=lconfig.config()["enable_download_img"],
+#                                   e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
+#                                   e_about=lconfig.config()["enable_about"],
+#                                   e_client_download=lconfig.config()["enable_client_download"],
+#                                   e_register=lconfig.config()["enable_register"],
+#                               qq_group_id=lconfig.config()["qq_group_id"],
+#                               qq_group_link=lconfig.config()["qq_group_link"])
+#        data["user"].remove(result.strip(' '))
+#        with open('data.json', 'w') as file:
+#            json.dump(data, file, indent=4)
+#        return render_template("del.html", result=result + " 移除成功！", color="white",
+#                               servername=lconfig.config()["server_name"], e_panel=lconfig.config()["enable_panel"],
+#                               e_real_world=lconfig.config()["enable_real_world"],
+#                               e_download_img=lconfig.config()["enable_download_img"],
+#                               e_tp=lconfig.config()["enable_tp"], e_seed_map=lconfig.config()["enable_seed_map"],
+#                               e_about=lconfig.config()["enable_about"],
+#                               e_client_download=lconfig.config()["enable_client_download"],
+#                               e_register=lconfig.config()["enable_register"],
+#                               qq_group_id=lconfig.config()["qq_group_id"],
+#                               qq_group_link=lconfig.config()["qq_group_link"])
+#    return render_template("del.html", e_panel=lconfig.config()["enable_panel"],
+#                           e_real_world=lconfig.config()["enable_real_world"],
+#                           e_download_img=lconfig.config()["enable_download_img"], e_tp=lconfig.config()["enable_tp"],
+#                           e_seed_map=lconfig.config()["enable_seed_map"], e_about=lconfig.config()["enable_about"],
+#                           e_client_download=lconfig.config()["enable_client_download"],
+#                           e_register=lconfig.config()["enable_register"],
+#                               qq_group_id=lconfig.config()["qq_group_id"],
+#                               qq_group_link=lconfig.config()["qq_group_link"])
 
 
 @app.route("/debug")
@@ -628,7 +628,7 @@ if __name__ == '__main__':
 
         lconfig.downctime("offline")
         print("\033[1;32mServer Started on 0.0.0.0:"+str(lconfig.config()["web_port"])+"\033[0m")
-        server = pywsgi.WSGIServer(('0.0.0.0', 8000), app)
+        server = pywsgi.WSGIServer(('0.0.0.0', int(lconfig.config()["web_port"])), app)
         server.serve_forever()
     except KeyboardInterrupt:
         print("\033[1;31mServer Stopped\033[0m")
