@@ -2,7 +2,7 @@
     "panel_ip": "127.0.0.1",
     "panel_port": 23333,
     "web_ip": "127.0.0.1",
-    "web_port": 5000,
+    "web_port": 6000,
     "server_name": "Loshop\u670d\u52a1\u5668",
     "server_name_en": "Loshop MC Server",
     "rcon_password": "password",
@@ -10,7 +10,7 @@
     "rcon_port": 25575,
     "real_world_ip": "127.0.0.1",
     "real_world_port": 8123,
-    "server_ip": "127.0.0.1",
+    "p": "127.0.0.1",
     "server_port": 25565,
     "server_id": "0abe924f348142f1b31995641ebaa318",
     "server_config_id": "be994588e90c4eb7acc746b7cc6b2175",
@@ -21,5 +21,7 @@
     "enable_download_img": "",
     "enable_tp": "true",
     "enable_seed_map": "true",
-    "enable_about": "true"
+    "enable_about": "true",
+    "qq_group_link": "http://127.0.0.1:23333/",
+    "qq_group_id": "15465452453"
 }

@@ -79,6 +79,8 @@ def cconfig():
         writeConfig("real_world_port",int(input("[SETUP] 请输入服务器Gynmap服务器端口(默认8123) >")))
         writeConfig("server_ip",input("[SETUP] 请输入MC服务器ip >"))
         writeConfig("server_port",int(input("[SETUP] 请输入MC服务器端口(默认25565) >")))
+        writeConfig("qq_group_id", input("[SETUP] 请输入QQ群号 >"))
+        writeConfig("qq_group_link", input("[SETUP] 请输入QQ群加入链接 >"))
         #writeConfig("server_id",input("[SETUP] 请输入服务器在MCSM中的id(默认0abe924f348142f1b31995641ebaa318) >"))
         #writeConfig("server_config_id",input("[SETUP] 请输入服务器在MCSM中配置文件的id(默认be994588e90c4eb7acc746b7cc6b2175) >"))
         if not input("[SETUP] 是否允许从官网进入MCSM控制面板(y允许 n禁止 默认允许) >")=="n":
