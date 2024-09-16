@@ -1,0 +1,23 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Loshop服务器</title>
+  </head>
+  <body>
+    <h1>Loshop 服务器</h1>
+    <h2>Loshop Mc Server</h2>
+    <a href="/client">下载客户端</a>
+    <a href="http://10.20.37.10:82">进入控制面板</a>
+    <a href="http://10.20.37.10:83">查看当前世界</a>
+    
+    <a href="http://10.20.37.10:81/zip">下载服务器镜像</a>
+    <a href="http://10.20.37.10:81/new">注册游戏名</a>
+    
+    <a href="http://10.20.37.10:81/tp">玩家传送</a>
+    <a href="https://www.chunkbase.com/apps/seed-map#seed=-1429313142873657825&platform=java_1_12&dimension=overworld">查看完整地图</a><H1></H1>
+    <h3>当前有{{pc}}位玩家在线</h3>
+    <h4>{{online}}</h4>
+  </body>
+</html>

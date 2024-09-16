@@ -1,0 +1,14 @@
+<local:MyCard Title="注意" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
+    <StackPanel Margin="25,40,23,15">
+      <local:MyHint Text="如果您的游戏名未注册，您将无法进入服务器" />
+        <TextBlock Margin="0,0,0,4" Text="" />
+        <TextBlock  Foreground="#8C7721" Text="启动游戏前请先点击下方按钮注册您的游戏名" />
+        <TextBlock Margin="0,0,0,4" Text="" />
+      <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Text="前往注册" EventType="打开网页" EventData="http://127.0.0.1:5000/new" />
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Title="快捷入口" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+      <local:MyButton Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" Text="打开官网" EventType="打开网页" EventData="http://127.0.0.1:5000" />
+    </StackPanel>
+</local:MyCard>

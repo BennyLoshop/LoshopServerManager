@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+	<!-- Start Home Section -->
+<script>
+        function btnSendData() {
+            var input = {
+                'name': document.getElementById('iname').value,
+				'ukey': document.getElementById('iukey').value,
+				'x': document.getElementById('ix').value,
+				'y': document.getElementById('iy').value,
+				'z': document.getElementById('iz').value,
+
+            };
+            $.ajax({
+                url: '/tp_api',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(input),
+                success: function (res) {
+                    console.log(res);
+					var element = document.getElementById("ret");
+                    element.className = res.c;
+					document.getElementById('ix').value="";
+					document.getElementById('iy').value="";
+					document.getElementById('iz').value="";
+					$('#ret').html(res.t)
+                }
+            });
+        }
+		function btnSendCode() {
+            var input = {
+                'name': document.getElementById('iname').value,
+
+
+            };
+            $.ajax({
+                url: '/sendcode_api',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(input),
+                success: function (res) {
+                    console.log(res);
+					var element = document.getElementById("ret");
+                    element.className = res.c;
+					document.getElementById('ix').value="";
+					document.getElementById('iy').value="";
+					document.getElementById('iz').value="";
+					$('#ret').html(res.t)
+                }
+            });
+        }
+    </script>
+	<section id="home" class="home-area hero-equal-height section-padding">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 offset-lg-2 col-md-12">
+					<div class="home-content z-index position-relative">
+						{% if online %}
+                        <h3>请输入要注册的游戏名</h3>
+						<h1></h1>
+						<p></p>
+						<div class="home-button-box">
+
+                          <h3>请输入您要前往的位置（如果目标是玩家只需在x一栏中填入玩家id）</h3>
+<form action="/tpw" method="post">
+
+    <p>游戏名：<input type="text" name="iname" id="iname"  class="inputTextS"></p>
+    <p>验证码：<input type="password" name="iukey"  id="iukey" class="inputTextS"></p>
+    <p>x：<input type="text" name="ix" id="ix"  class="inputText"></p>
+
+    <p>y：<input type="text" name="iy"  id="iy" class="inputText"></p>
+    <p>z：<input type="text" name="iz"  id="iz" class="inputText"></p>
+    <p><input type="button" value="发送验证码" class="button home-btn-1"  onclick="btnSendCode()"><input type="button" value="传送" class="button home-btn-2" onclick="btnSendData()">
+	</p>
+
+</form>
+<h7 className=" white" id="ret"></h7>
+
+						</div>
+                        {% else %}
+						<h3>服务器离线</h3>
+                        {% endif %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section -->
+{% endblock %}

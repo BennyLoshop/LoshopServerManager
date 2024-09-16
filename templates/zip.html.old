@@ -1,0 +1,19 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Loshop服务器</title>
+  </head>
+  <body>
+    <h1>Loshop 服务器</h1>
+    <h2>Loshop Mc Server</h2>
+    
+    <a href=http://10.20.37.10:81>返回</a> 
+    <h3>下载服务器完整包（不包含WEB服务器）</h3>
+    <h4>快照时间：{{time}}</h4>
+    <a href=http://10.20.37.10:81/static/server.zip>点击下载</a> 
+    <a href=http://10.20.37.10:81/rezip>重新获取快照</a> 
+</form>
+</body>
+</html>

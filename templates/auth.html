@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Start Home Section -->
+	<section id="home" class="home-area hero-equal-height section-padding">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 offset-lg-2 col-md-12">
+					<div class="home-content z-index position-relative">
+						<h3>请输入验证码</h3>
+						<h1></h1>
+						<p></p>
+						<div class="home-button-box">
+							
+                          <form action="/auth" method="post">
+    <p>游戏名：<input type="text" name="ukey" class="inputText"></p>
+    <p><input type="submit" value="提交" class="button home-btn-2"></p>
+    <h7 class="{{color}}">{{result}}</h7>
+</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section -->
+{% endblock %}

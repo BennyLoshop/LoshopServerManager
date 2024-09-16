@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Start Home Section -->
+
+<script>
+        function btnSendData() {
+            var input = {
+                'name': document.getElementById('iname').value,
+
+            };
+            $.ajax({
+                url: '/new_api',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(input),
+                success: function (res) {
+                    console.log(res);
+					var element = document.getElementById("ret");
+                    element.className = res.c;
+					document.getElementById('iname').value="";
+					$('#ret').html(res.t)
+                }
+            });
+        }
+    </script>
+	<section id="home" class="home-area hero-equal-height section-padding">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 offset-lg-2 col-md-12">
+					<div class="home-content z-index position-relative">
+						<h3>请输入要注册的游戏名</h3>
+						<h1></h1>
+						<p></p>
+						<div class="home-button-box">
+
+                          <form action="/new" method="post">
+    <p>游戏名：<input type="text" name="name" class="inputText" id="iname"></p>
+    <p><input type="button" value="提交" class="button home-btn-2"  onclick="btnSendData()"></p>
+    <h7 class="{{color}}" id="ret">{{result}}</h7>
+</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section -->
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Start Home Section -->
+	<section id="home" class="home-area hero-equal-height section-padding">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 offset-lg-2 col-md-12">
+					<div class="home-content z-index position-relative">
+						<h3>下载服务器完整包（不包含WEB服务器）</h3>
+                      <h6 class="white">快照时间：{{time}}</h6>
+						<p></p>
+						<div class="home-button-box">
+							<a href="/static/server.zip" class="button home-btn-1 js-scroll">点击下载</a>
+							<a href="/rezip" class="button home-btn-2">重新获取快照</a>
+						</div>
+						
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section -->
+{% endblock %}

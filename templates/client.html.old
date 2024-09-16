@@ -1,0 +1,16 @@
+<!doctype html>
+<html >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Loshop服务器</title>
+  </head>
+  <body>
+    <h1>Loshop 服务器</h1>
+    <h2>Loshop Mc Server</h2>
+    <a href=http://10.20.37.10:81>返回</a> 
+    <a href="http://10.20.37.10:81/client_download">点击下载</a>(安装密码1234)<h1></h1>
+    <h3>下载完毕后，启动mc.exe，在弹出的对话框中选择文件解压到的路径，解压完毕后双击启动目录下的launcher.exe，如提示需要.Net4，请运行netinstaller.exe安装依赖</h3>
+    <a href="http://10.20.37.10:81/java_download">安装JAVA8</a>
+  </body>
+</html>
